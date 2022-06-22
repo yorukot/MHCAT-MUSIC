@@ -190,9 +190,8 @@ ${ProgressBar}
                     list() 
                 return greate("清單成功隨機排序!")
             }if(interaction.customId.includes('leavemusic')){
-                guildQueue.stop();
-                list() 
-                return interaction.reply("<a:116e10243c5900b92aeed21c8950c56e:981721909731422278> | 我被`" + interaction.user.username + "`踢出了音樂頻道")
+                guildQueue.leave();
+                interaction.reply("<a:116e10243c5900b92aeed21c8950c56e:981721909731422278> | 我被`" + interaction.user.username + "`踢出了音樂頻道")
             }if(interaction.customId.includes('skipmusic')){
                 guildQueue.skip();
                     list()
