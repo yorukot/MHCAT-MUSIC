@@ -35,7 +35,7 @@ readdirSync('./slashCommands').forEach(async (dir) => {
                     });
                     await client.application.commands.create(data);
 
-                }, 4000);
+                }, 6000);
             
             }
         })        

@@ -48,6 +48,7 @@ client.player
         if(!guild) return
         const channel = guild.channels.cache.get(queue.data.channel)
         if(!channel) return
+        if(error === "aborted") return console.log("aborted")
         channel.send(`:x: | 很抱歉，出現了${error}錯誤`)
         console.log(`Error: ${error} in ${queue.guild.name}`);
         return

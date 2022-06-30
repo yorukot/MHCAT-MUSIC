@@ -210,7 +210,7 @@ ${ProgressBar}
         const list10 = guildQueue.songs[number*10 + 9] ? `\n❰ **${number*10 + 10}** ❱ ${guildQueue.songs[number*10 + 9].author} ━ [${guildQueue.songs[number*10 + 9].name}](${guildQueue.songs[number*10 + 9].url})` : ""
         const embed = new MessageEmbed()
         .setTitle(`<a:loader:982197182906134558> | 播放清單`)
-        .setDescription(`${list1}${list2}${list3}${list4}${list5}${list6}${list7}${list8}${list9}${list10}
+        .setDescription(`${list1}${list2}${list3}${list4}${list5}${list6}${list7}${list8}${list9}${list10}m
 
 總共:\`${guildQueue.songs.length}\`首歌
 第 \`${number + 1} / ${Math.ceil(guildQueue.songs.length / 10)}\` 頁(按按鈕會自動更新喔!)
@@ -246,8 +246,7 @@ ${ProgressBar}
             list()
             interaction.reply({embeds: [embed], components: [bt100]})
         }else{
-            interaction.channel.send({embeds: [embed], components: [bt100]})
-            interaction.message.delete()
+            interaction.update({embeds: [embed], components: [bt100]})
         }
         return 
         }if(interaction.customId.includes('deletemusic')){

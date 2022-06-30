@@ -29,7 +29,7 @@ const client = new Client({
 });
 const player = new Player(client, {
     leaveOnEmpty: true,
-    timeout: 300000,
+    timeout: 300000
     //ytdlRequestOptions: { 
     //    headers: {
     //        Cookie: cookie
