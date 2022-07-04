@@ -42,7 +42,7 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle("<:Discord_Bot:986319391660593172> 目前系統使用量:")
         .addField("<:cpu:986062422383161424> CPU型號:\n", `\`${cpu.brand}\``)
-        .addField("<:cpu:987630931932229632> CPU使用量:\n", `\`${round(v) * 100}\`%`, true)
+        .addField("<:cpu:987630931932229632> CPU使用量:\n", `\`${Math.round(round(v) * 100)}\`%`, true)
         .addField("<:rammemory:986062763598155797> RAM使用量:",`\`${usedRam}\\${totalRam}\` MB`, true)
         .addField("<:chronometer:986065703369080884> 運行時間:", `\`${format(uptime)}\``,true)
         .addField("<:server:986064124209418251> 總伺服器:",`\`${Clienta.guilds.cache.size}\``,true)
